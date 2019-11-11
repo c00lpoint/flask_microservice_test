@@ -1,3 +1,4 @@
 class ServiceConfig:
     DEBUG = True
-    PORT = 5002
+    SERVER_NAME = 'localhost:5002'
+

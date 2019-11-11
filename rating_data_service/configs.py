@@ -1,3 +1,3 @@
-class ServiceConfig:
+class FlaskConfig:
     DEBUG = True
-    PORT = 5003
+    SERVER_NAME ='localhost:5003'
