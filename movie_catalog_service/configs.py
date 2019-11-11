@@ -1,3 +1,3 @@
 class ServiceConfig:
     DEBUG = True
-    PORT = '5001'
+    PORT = 5001
