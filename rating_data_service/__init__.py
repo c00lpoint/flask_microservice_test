@@ -2,7 +2,8 @@ from flask import Flask
 from flask_restful import Api
 from flask_eureka import Eureka
 
-from rating_data_service.configs import FlaskConfig
+from common_utilities.utilities import register_eureka_service
+from rating_data_service.configs import FlaskConfig, ApplicationConfig
 from rating_data_service.services import RatingDataService, UserRatingService
 
 
@@ -18,5 +19,6 @@ def create_app():
 
     # register eureka
     # eureka.register_service()  # this method not support with windows env
+    register_eureka_service(app_name=ApplicationConfig.APP_NAME, instance_port=ApplicationConfig.SERVICE_PORT)
 
     return app
