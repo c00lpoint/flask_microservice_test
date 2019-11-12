@@ -1,3 +1,12 @@
-class ServiceConfig:
+class ApplicationConfig:
+    APP_NAME = 'movie-catalog-service'
+    SERVICE_PORT = 5001
+
+
+class FlaskConfig:
     DEBUG = True
-    PORT = 5001
+
+
+class EurekaServiceName:
+    RATING_DATA = "RATING-DATA-SERVICE"
+    MOVIE_DATA = 'MOVIE-DATA-SERVICE'

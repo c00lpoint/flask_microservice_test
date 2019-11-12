@@ -1,14 +1,15 @@
 from flask_restful import Resource, abort
 import requests
 
-from movie_data_service.constants import ServiceUrls, TmdbMovieProperties
+from movie_data_service.configs import ExternalServiceUrls
+from movie_data_service.constants import TmdbMovieProperties
 from common_utilities.constants import MovieProperties
 
 
 class MovieDataService(Resource):
 
     def get(self, movie_id):
-        tmdb_move_service_url = ServiceUrls.TMDB_MOVIE_SEARCH_URL_FORMAT % movie_id
+        tmdb_move_service_url = ExternalServiceUrls.TMDB_MOVIE_SEARCH_URL_FORMAT % movie_id
         rps = requests.get(tmdb_move_service_url)
         if rps.ok:
             tmdb_movie_info = rps.json()

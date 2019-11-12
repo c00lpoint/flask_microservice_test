@@ -1,5 +1,5 @@
 from py_eureka_client import eureka_client
-from socket import gethostname
+# from socket import gethostname
 
 from common_utilities.configs import CommonConfig
 
